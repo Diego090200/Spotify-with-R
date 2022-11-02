@@ -12,6 +12,7 @@ class Obtencion:
             client_credentials_manager=SpotifyClientCredentials(client_id=self.cid, client_secret=self.secret))
 
     def obtener_albumes(self, artist_link: str):  # retorna los json de cada album
+        # Y regresa una lista, cuyos elementos son todos json
         results = self.spotify.artist_albums(artist_link, album_type='album')
         albums = results['items']
         while results['next']:
@@ -24,6 +25,7 @@ class Obtencion:
         return albumes_json
 
     def obtener_tracks(self, album_uri):  # obtiene los json de cada una de las canciones en un album
+        # Y regresa una lista, cuyos elementos son todos json
         results = self.spotify.album_tracks(album_uri, offset=0)
         tracks = results['items']
         while results['next']:
@@ -35,7 +37,8 @@ class Obtencion:
             tracks_json.append(track_json)
         return tracks_json
 
-    def obtener_top(self, artist_link):  # obtiene toda la info del top 10 de canciones
+    def obtener_top(self, artist_link):  # obtiene toda la info del top 10 de canciones,
+        # y regresa una lista con elementos json
         # y los devuelve en una lista de json
         results2 = self.spotify.artist_top_tracks(artist_link)
         canciones = results2["tracks"]
