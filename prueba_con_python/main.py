@@ -33,7 +33,9 @@ for album in albums:
                 contador+1
         if contador == 0:
             album_uri.append(album["uri"])
-
+album_json = json.dumps(albums[0])
+pprint.pp(album_json)
+print("\n")
 #  Body of the code for the tracks
 results = spotify.album_tracks(album_uri[0], offset=0)
 tracks = results['items']
@@ -44,8 +46,9 @@ while results['next']:
 print("despues del while")
 for track in tracks:
     print("Nombre de la canción: ", track['name'])
-print(tracks[0])
-
+track_json = json.dumps(tracks[0])
+pprint.pp(track_json)
+print("\n")
 # body of the code for top 10 tracks
 artis_link = 'https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd?si=eYYENqfMQIi2VnaP8v1hhQ'
 results2 = spotify.artist_top_tracks(artis_link)

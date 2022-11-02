@@ -1,0 +1,100 @@
+{
+    "album": {
+        "album_type": "single",
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": '
+ '"https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd"
+                },
+                "href": '
+ '"https://api.spotify.com/v1/artists/0GWCNkPi54upO9WLlwjAHd",
+                "id": '
+ '"0GWCNkPi54upO9WLlwjAHd",
+                "name": "Big Time Rush",
+                "type": "artist",
+                "uri": '
+ '"spotify:artist:0GWCNkPi54upO9WLlwjAHd"
+            }
+        ],
+        "external_urls": {
+            "spotify": '
+ '"https://open.spotify.com/album/2Wamb4m82wexz3C88JFlmy"
+        },
+        "href": '
+ '"https://api.spotify.com/v1/albums/2Wamb4m82wexz3C88JFlmy",
+        "id": '
+ '"2Wamb4m82wexz3C88JFlmy",
+        "images": [
+            {
+                "height": 640,
+                "url": '
+ '"https://i.scdn.co/image/ab67616d0000b273a058ab453183c35b918b1688",
+                "width": '
+ '640
+            },
+            {
+                "height": 300,
+                "url": '
+ '"https://i.scdn.co/image/ab67616d00001e02a058ab453183c35b918b1688",
+                "width": '
+ '300
+            },
+            {
+                "height": 64,
+                "url": '
+ '"https://i.scdn.co/image/ab67616d00004851a058ab453183c35b918b1688",
+                "width": '
+ '64
+            }
+        ],
+        "name": "Call It Like I See It",
+        "release_date": "2021-12-13", '
+ '"release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": '
+ '"spotify:album:2Wamb4m82wexz3C88JFlmy"
+    },
+    "artists": [
+        {
+            "external_urls": '
+ '{
+                "spotify": "https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd"
+            }, '
+ '"href": "https://api.spotify.com/v1/artists/0GWCNkPi54upO9WLlwjAHd",
+            "id": '
+ '"0GWCNkPi54upO9WLlwjAHd",
+            "name": "Big Time Rush",
+            "type": "artist",
+            "uri": '
+ '"spotify:artist:0GWCNkPi54upO9WLlwjAHd"
+        }
+    ],
+    "disc_number": 1,
+    "duration_ms": '
+ '184766,
+    "explicit": false,
+    "external_ids": {
+        "isrc": "QMDA72164978"
+    }, '
+ '"external_urls": {
+        "spotify": '
+ '"https://open.spotify.com/track/5zpR9iel4xXiZ3HP9owOiL"
+    },
+    "href": '
+ '"https://api.spotify.com/v1/tracks/5zpR9iel4xXiZ3HP9owOiL",
+    "id": '
+ '"5zpR9iel4xXiZ3HP9owOiL",
+    "is_local": false,
+    "is_playable": true,
+    "name": '
+ '"Call It Like I See It",
+    "popularity": 54,
+    "preview_url": '
+ '"https://p.scdn.co/mp3-preview/37e5ed34ec560b7a64ddb6cb05b53442ff806f10?cid=c2f4d1147b804b468423e1b9106665f2", '
+ '"track_number": 1,
+    "type": "track",
+    "uri": '
+ '"spotify:track:5zpR9iel4xXiZ3HP9owOiL"
+}

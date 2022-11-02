@@ -1,0 +1,67 @@
+{
+    "album_group": "album",
+    "album_type": "album",
+    "artists": '
+ '[
+        {
+            "external_urls": {
+                "spotify": '
+ '"https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd"
+            },
+            "href": '
+ '"https://api.spotify.com/v1/artists/0GWCNkPi54upO9WLlwjAHd",
+            "id": '
+ '"0GWCNkPi54upO9WLlwjAHd",
+            "name": "Big Time Rush",
+            "type": "artist",
+            "uri": '
+ '"spotify:artist:0GWCNkPi54upO9WLlwjAHd"
+        }
+    ],
+    "available_markets": [
+        "AD",
+        "DZ", '
+ '"FR",
+        "MA",
+        "MC",
+        "TN"
+    ],
+    "external_urls": {
+        "spotify": '
+ '"https://open.spotify.com/album/2qFkdrt3cqtLolLsxjYA5h"
+    },
+    "href": '
+ '"https://api.spotify.com/v1/albums/2qFkdrt3cqtLolLsxjYA5h",
+    "id": '
+ '"2qFkdrt3cqtLolLsxjYA5h",
+    "images": [
+        {
+            "height": 640,
+            "url": '
+ '"https://i.scdn.co/image/ab67616d0000b27360774babfe58edc140d14b71",
+            "width": '
+ '640
+        },
+        {
+            "height": 300,
+            "url": '
+ '"https://i.scdn.co/image/ab67616d00001e0260774babfe58edc140d14b71",
+            "width": '
+ '300
+        },
+        {
+            "height": 64,
+            "url": '
+ '"https://i.scdn.co/image/ab67616d0000485160774babfe58edc140d14b71",
+            "width": '
+ '64
+        }
+    ],
+    "name": "Big Time Rush",
+    "release_date": "2016-06-24", '
+ '"release_date_precision": "day",
+    "total_tracks": 19,
+    "type": "album",
+    "uri": '
+ '"spotify:album:2qFkdrt3cqtLolLsxjYA5h"
+}
