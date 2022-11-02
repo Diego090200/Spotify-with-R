@@ -59,6 +59,6 @@ for artista in top_tracks_info_json:  # literal esto es para guardar datos en mo
     for tr in artista:
         archivo_json = json.loads(tr)
         top_dict.append(archivo_json)
-#  coneccion.insert(albumens_dict, "albumes")
-#  coneccion.insert(tracks_dict, "tracks")
+coneccion.insert(albumens_dict, "albumes")
+coneccion.insert(tracks_dict, "tracks")
 coneccion.insert(top_dict, "tops")
