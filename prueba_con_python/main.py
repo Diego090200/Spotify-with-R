@@ -1,7 +1,12 @@
 import pprint
 import obtencion
 import json
+from database.db import Database
+from database.mongodb import MongoConection
 
+
+# variables para mongo
+coneccion: Database = MongoConection()
 
 # Variables de Spotify
 cid = "c2f4d1147b804b468423e1b9106665f2"
@@ -19,6 +24,11 @@ albumes_artistas_json = []  # Esta variable va a tener la info de los albumes
 albumens_uris = []
 tracks_info_json = []  # Esta va a tener la info de las tracks
 top_tracks_info_json = []  # Esta del top 10, agrupada por artista (supongo)
+#  Listas de json pero en diccionarios
+albumens_dict = []
+tracks_dict = []
+top_dict = []
+
 
 #  aquí se agregarán todos los datos
 for artista in lista_artistas:
@@ -33,9 +43,22 @@ for artista in albumes_artistas_json:
         cont_album += 1
         # Este paso es importante para poder leer la info de un json
         archivo_json = json.loads(album)
+        albumens_dict.append(archivo_json)  # esto de aquí va a servir para guardar datos en mongo
         albumens_uris.append(archivo_json["uri"])
     cont_artista += 1
 print("\n\n")
 #  En la variable albumes_uris vamos a tener el link para buscar las tracks de los albumes
 for uri in albumens_uris:
     tracks_info_json.append(funciones.obtener_tracks(uri))
+    for lst_tr in top_tracks_info_json: # esto de aquí va a servir para guardar datos en mongo
+        for tr in lst_tr:
+            archivo_json = json.loads(tr)
+            tracks_dict.append(archivo_json)
+
+for artista in top_tracks_info_json:  # literal esto es para guardar datos en mongo
+    for tr in artista:
+        archivo_json = json.loads(tr)
+        top_dict.append(archivo_json)
+#  coneccion.insert(albumens_dict, "albumes")
+#  coneccion.insert(tracks_dict, "tracks")
+coneccion.insert(top_dict, "tops")
