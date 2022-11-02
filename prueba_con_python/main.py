@@ -1,5 +1,8 @@
+import pprint
+
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import json
 
 
 #  Authentication
@@ -14,9 +17,43 @@ scope = "user-library-read"
 artis_link = 'https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd?si=eYYENqfMQIi2VnaP8v1hhQ'
 results = spotify.artist_albums(artis_link, album_type='album')
 albums = results['items']
+album_uri = []
 while results['next']:
     results = spotify.next(results)
     albums.extend(results['items'])
 
 for album in albums:
-    print(album['name'])
+    print("Nombre: ", album['name'], )
+    if len(album_uri) <= 0:
+        album_uri.append(album["uri"])
+    else:
+        contador = 0
+        for i in album_uri:
+            if i == album["uri"]:
+                contador+1
+        if contador == 0:
+            album_uri.append(album["uri"])
+
+#  Body of the code for the tracks
+results = spotify.album_tracks(album_uri[0], offset=0)
+tracks = results['items']
+print("antes del while")
+while results['next']:
+    results = spotify.next(results)
+    tracks.extend(results['items'])
+print("despues del while")
+for track in tracks:
+    print("Nombre de la canción: ", track['name'])
+print(tracks[0])
+
+# body of the code for top 10 tracks
+artis_link = 'https://open.spotify.com/artist/0GWCNkPi54upO9WLlwjAHd?si=eYYENqfMQIi2VnaP8v1hhQ'
+results2 = spotify.artist_top_tracks(artis_link)
+canciones = results2["tracks"]
+contador2 = 0
+for cancion in canciones:
+    print(f"###{contador2}###")
+    print(cancion)
+    data = json.dumps(cancion)
+    pprint.pp(data)
+    contador2 = contador2 + 1
