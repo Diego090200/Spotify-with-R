@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16a7a32a-2a8b-4e48-8b25-6b2eaf1dc663" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/prueba_con_python/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/prueba_con_python/.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba_con_python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/prueba_con_python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/track.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

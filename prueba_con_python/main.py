@@ -62,12 +62,12 @@ for artista in top_tracks_info_json:  # literal esto es para guardar datos en mo
         archivo_json = json.loads(tr)
         top_dict.append(archivo_json)
 
-with open(r"C:\Users\alehe\Desktop\tracks.json", 'w') as f:
-    json.dump(tracks_dict, f)
+with open(r"C:\Users\alehe\Desktop\tops.json", 'w') as f:
+    json.dump(top_dict, f)
 
-track_csv = pd.read_json(r"C:\Users\alehe\Desktop\tracks.json")
-track_csv.to_csv('track.csv')
+top_csv = pd.read_json(r"C:\Users\alehe\Desktop\tops.json")
+top_csv.to_csv('tops.csv')
 
 # coneccion.insert(albumens_dict, "albumes")
-coneccion.insert(tracks_dict, "tracks")
-# coneccion.insert(top_dict, "tops")
+# coneccion.insert(tracks_dict, "tracks")
+coneccion.insert(top_dict, "tops")
