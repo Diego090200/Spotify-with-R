@@ -1,6 +1,8 @@
 import pprint
 import obtencion
 import json
+import pandas as pd
+import pickle
 from database.db import Database
 from database.mongodb import MongoConection
 
@@ -59,6 +61,13 @@ for artista in top_tracks_info_json:  # literal esto es para guardar datos en mo
     for tr in artista:
         archivo_json = json.loads(tr)
         top_dict.append(archivo_json)
-#  coneccion.insert(albumens_dict, "albumes")
-#  coneccion.insert(tracks_dict, "tracks")
-coneccion.insert(top_dict, "tops")
+
+with open(r"C:\Users\alehe\Desktop\tracks.json", 'w') as f:
+    json.dump(tracks_dict, f)
+
+track_csv = pd.read_json(r"C:\Users\alehe\Desktop\tracks.json")
+track_csv.to_csv('track.csv')
+
+# coneccion.insert(albumens_dict, "albumes")
+coneccion.insert(tracks_dict, "tracks")
+# coneccion.insert(top_dict, "tops")
