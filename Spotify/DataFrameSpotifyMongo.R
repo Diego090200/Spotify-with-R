@@ -1,0 +1,6 @@
+install.packages("mongolite")
+install.packages("rjava")
+install_github("jeroen/mongolite")
+library(mongolite)
+mng_conn <- mongo (collection = 'tops', db = 'r_python')
+tops_mongo <- mng_conn$find('{}')
